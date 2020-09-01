@@ -22,7 +22,8 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
                                                         n_molecules = 500,
                                                         time_step_const = df_per_cpu[ith_row, "step"]),
                            error = function(e) data.frame())
-            saveRDS(res, file = paste0("~/HDX_sim_vol2/results/theo_spectrum_", df_per_cpu[ith_row, "sequence"], "_",
+            print("halo")
+            saveRDS(res, file = paste0("./results/theo_spectrum_", df_per_cpu[ith_row, "sequence"], "_",
                                        df_per_cpu[ith_row, "pH"], "_",
                                        df_per_cpu[ith_row, "protection_factor"], "_",
                                        ith_row, ".RDS", collapse = ""))
