@@ -1,3 +1,5 @@
+#!/bin/bash
+
 library(doParallel)
 library(powerHDX)
 
@@ -21,9 +23,7 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
                                                         temperature = 15,
                                                         n_molecules = 500,
                                                         time_step_const = df_per_cpu[ith_row, "step"]),
-                           error = function(e) {
-                               print(e)
-                               data.frame()})
+                           error = function(e) data.frame())
             print("halo")
             saveRDS(res, file = paste0("./results/theo_spectrum_", df_per_cpu[ith_row, "sequence"], "_",
                                        df_per_cpu[ith_row, "pH"], "_",
