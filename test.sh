@@ -1,9 +1,11 @@
 #!/bin/bash
-#SBATCH −J lauchRscript
-#SBATCH −ooutput . out
+#SBATCH --time=01:00:00
+#SBATCH --job-name="A long job"
+#SBATCH --mem=5GB
+#SBATCH --output=long-job.out
 
 module purge
 
-module load system/R−3.5.1
+module load system/R−3.6.1
 
-Rscript test.R
+~/R-3.6.1/bin/Rscript test.R
