@@ -40,12 +40,11 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
 
 times = c(5, 10, 20, 30, 40)
 
-all_params = readRDS("./all_params.RDS")[1, ]
+all_params = readRDS("./all_params.RDS")[1:10, ]
 all_params$sequence = as.character(all_params$sequence)
 all_params$charge = as.numeric(as.character(all_params$charge))
 
 cores = detectCores()
-cores = 1
 
 sim_theo_spectra(all_params, cores, times)
 
