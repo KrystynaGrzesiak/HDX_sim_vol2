@@ -3,9 +3,64 @@ Loading required package: foreach
 Loading required package: iterators
 Loading required package: parallel
 [1] "Simulation 1 \n"
+[1] "Simulation 1 \n"
+[1] "Simulation 1 \n"
+[1] "Simulation 1 \n"
+[1] "Simulation 1 \n"
+[1] "Simulation 1 \n"
 [1] "halo"
-$`1`
-$`1`[[1]]
+[1] "halo"
+[1] "halo"
+[1] "halo"
+[1] "halo"
+[1] "Simulation 2 \n"
+[1] "halo"
+[1] "Simulation 2 \n"
+[1] "Simulation 2 \n"
+[1] "halo"
+[1] "halo"
+[1] "halo"
+[1] "Simulation 3 \n"
+[1] "halo"
+$`3`
+$`3`[[1]]
+NULL
+
+$`3`[[2]]
+NULL
+
+
+$`6`
+$`6`[[1]]
+NULL
+
+
+$`7`
+$`7`[[1]]
+NULL
+
+
+$`8`
+$`8`[[1]]
+NULL
+
+$`8`[[2]]
+NULL
+
+$`8`[[3]]
+NULL
+
+
+$`9`
+$`9`[[1]]
+NULL
+
+$`9`[[2]]
+NULL
+
+
+$`11`
+$`11`[[1]]
 NULL
 
 
