@@ -34,13 +34,11 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
     }, mc.cores = n_cpus)
 }
 
-# times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
-#           2100, 2400, 3600, 7200, 21600, 43200)
+times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
+          2100, 2400, 3600, 7200, 21600, 43200)
 
 
-times = c(5, 10, 20, 30, 40)
-
-all_params = readRDS("./all_params_new_pf.RDS")[1:10, ]
+all_params = readRDS("./all_params_new_pf.RDS")
 all_params$sequence = as.character(all_params$sequence)
 all_params$charge = as.numeric(as.character(all_params$charge))
 
