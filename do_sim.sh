@@ -1,8 +1,6 @@
 #!/bin/bash
-#SBATCH --time=01:00:00
-#SBATCH --job-name="A long job"
-#SBATCH --mem=5GB
-#SBATCH --output=long-job.out
+#SBATCH --job-name="theo_spec"
+#SBATCH --output=theo_spectra.out
 
 module purge
 
