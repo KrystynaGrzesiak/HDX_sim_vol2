@@ -24,7 +24,6 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
                            error = function(e) {
                                print(e)
                                data.frame()})
-            print("halo")
             saveRDS(res, file = paste0("./results/theo_spectrum_", df_per_cpu[ith_row, "sequence"], "_",
                                        df_per_cpu[ith_row, "pH"], "_",
                                        df_per_cpu[ith_row, "protection_factor"], "_",

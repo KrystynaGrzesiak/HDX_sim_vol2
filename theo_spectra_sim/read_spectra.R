@@ -6,6 +6,22 @@ library(ggplot2)
 files <- list.files(path = "G:/HDX_sim_vol2/theo_spectra_sim/results", pattern = "\\.RDS$", full.names = TRUE)
 sim_results <- do.call("rbind", lapply(files, readRDS))
 
+params <- readRDS("all_params_new_pf.RDS") %>% 
+  select(sequence, pH, protection_factor) %>% 
+  unique()
+
+colnames(params) = c("Sequence", "PH", "PF")
+
+sim_params <- sim_results %>% 
+  select(Sequence, PH, PF) %>% 
+  unique()
+
+setdiff(params, sim_params) %>% 
+  arrange(desc(Sequence))
+
+
+
+
 spectra_by_ph_sequence = split(sim_results, f = sim_results[, c("Sequence", "PH")])
 saveRDS(spectra_by_ph_sequence, file = "spectra_by_ph_seq.RDS")
 
