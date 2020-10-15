@@ -2,6 +2,7 @@
 library(powerHDX)
 library(dplyr)
 library(ggplot2)
+library(plyr)
 
 files <- list.files(path = "G:/HDX_sim_vol2/theo_spectra_sim/results", pattern = "\\.RDS$", full.names = TRUE) 
 sim_results <- do.call("rbind", lapply(files, readRDS))
@@ -22,19 +23,17 @@ missing1 #empty data frame, i.e. error during simulation #18 data frames
 
 params <- params_from_file %>% 
   select(sequence, pH, charge, protection_factor) %>% 
-  unique() %>% 
-  nrow()
+  unique() #12117 rows
 
 colnames(params) <- c("Sequence", "PH", "Charge", "PF")
 params[["Charge"]] <- as.numeric(params[["Charge"]])
 
 
-
 sim_params <- sim_results %>% 
   select(Sequence, PH, Charge, PF) %>% 
-  unique() 
+  unique() # 7986 rows ?? why?
 
-missing_params <- setdiff(params, sim_params) 
+missing_params <- setdiff(params, sim_params) #4131 rows
 colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor")
 
 saveRDS(missing_params, file = "missing_params.RDS")
