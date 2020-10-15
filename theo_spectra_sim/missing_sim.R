@@ -1,7 +1,7 @@
 library(doParallel)
 library(powerHDX)
 
-setwd("~/HDX_sim_vol2")
+setwd("~/HDX_sim_vol2/theo_spectra_sim")
 load("sysdata.rda")
 
 sim_theo_spectra = function(all_params, n_cpus, times) {
