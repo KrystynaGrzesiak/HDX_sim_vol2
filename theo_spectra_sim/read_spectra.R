@@ -10,7 +10,7 @@ params_from_file <- readRDS("all_params_new_pf.RDS")
 
 nrow(params_from_file) #all spectra #12117 rows
 length(files) #spectra from simulation #11117 files
-nrow(params) - length(files) #missing spectra
+nrow(params_from_file) - length(files) #missing spectra
 
 missing1 <- sum(sapply(files, function(i) {
   dat = readRDS(i)
@@ -22,7 +22,8 @@ missing1 #empty data frame, i.e. error during simulation #18 data frames
 
 params <- params_from_file %>% 
   select(sequence, pH, charge, protection_factor) %>% 
-  unique() 
+  unique() %>% 
+  nrow()
 
 colnames(params) <- c("Sequence", "PH", "Charge", "PF")
 params[["Charge"]] <- as.numeric(params[["Charge"]])
