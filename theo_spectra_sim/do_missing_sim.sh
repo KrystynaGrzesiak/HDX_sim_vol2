@@ -1,6 +1,7 @@
 #!/bin/bash
 #SBATCH --output=missing.out
 #SBATCH --job-name="missing_sim"
+#SBATCH --partition=accel
 #
 #SBATCH --time=30-00:00:00
 
