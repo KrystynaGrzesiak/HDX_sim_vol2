@@ -7,17 +7,19 @@ files <- list.files(path = "G:/HDX_sim_vol2/theo_spectra_sim/results", pattern =
 sim_results <- do.call("rbind", lapply(files, readRDS))
 
 params <- readRDS("all_params_new_pf.RDS") %>% 
-  select(sequence, pH, protection_factor) %>% 
+  select(sequence, pH, protection_factor, charge) %>% 
+  mutate(Charge = as.numeric(charge)) %>% 
+  select(-charge) %>% 
   unique()
 
-colnames(params) = c("Sequence", "PH", "PF")
+colnames(params) = c("Sequence", "PH", "PF", "Charge")
 
 sim_params <- sim_results %>% 
-  select(Sequence, PH, PF) %>% 
+  select(Sequence, PH, PF, Charge) %>% 
   unique()
 
 setdiff(params, sim_params) %>% 
-  arrange(desc(Sequence))
+  nrow()
 
 
 
