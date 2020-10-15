@@ -2,7 +2,7 @@
 #SBATCH --output=missing.out
 #SBATCH --job-name="missing_sim"
 #
-#SBATCH --time=30:00:00:00
+#SBATCH --time=30-00:00:00
 
 module purge
 
