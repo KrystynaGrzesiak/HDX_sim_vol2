@@ -24,7 +24,7 @@ missing1 #empty data frame, i.e. error during simulation #18 data frames
 params_from_file[["charge"]] <- as.numeric(params_from_file[["charge"]]) 
 
 params <- params_from_file %>% 
-  select(-step, -n_steps, -time)
+  select(-size_of_time_step, -n_steps, -time)
 
 
 sim_params <- sim_results %>% 
@@ -41,7 +41,7 @@ sim_params_step <- merge(x = sim_params, y = params,
 
 
 missing_params <- setdiff(params, sim_params_step) #4131 rows
-colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor", "size_of_time_step")
+colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor", "step")
 
 saveRDS(missing_params, file = "missing_params.RDS")
 
