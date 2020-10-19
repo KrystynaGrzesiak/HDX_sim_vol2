@@ -9,8 +9,8 @@ sim_results <- do.call("rbind", lapply(files, readRDS))
 
 params_from_file <- readRDS("all_params_new_pf.RDS") 
 
-nrow(params_from_file) #all spectra #12117 rows
-length(files) #spectra from simulation #11117 files
+nrow(params_from_file) #all spectra #12 117 rows
+length(files) #spectra from simulation #11 107 files
 nrow(params_from_file) - length(files) #missing spectra
 
 missing1 <- sum(sapply(files, function(i) {
@@ -21,19 +21,26 @@ missing1 <- sum(sapply(files, function(i) {
 missing1 #empty data frame, i.e. error during simulation #18 data frames
 
 
-params <- params_from_file %>% 
-  select(sequence, pH, charge, protection_factor) %>% 
-  unique() #12117 rows
+params_from_file[["charge"]] <- as.numeric(params_from_file[["charge"]]) 
 
-colnames(params) <- c("Sequence", "PH", "Charge", "PF")
-params[["Charge"]] <- as.numeric(params[["Charge"]])
+params <- params_from_file %>% 
+  select(-step, -n_steps, -time)
 
 
 sim_params <- sim_results %>% 
-  select(Sequence, PH, Charge, PF) %>% 
-  unique() # 7986 rows ?? why?
+  select(Sequence, PH, Charge, PF, Exposure)
 
-missing_params <- setdiff(params, sim_params) #4131 rows
+colnames(sim_params) <- c("sequence", "pH", "charge", "protection_factor", "time")
+
+
+sim_params_step <- merge(x = sim_params, y = params, 
+                         by = c("sequence", "pH", "charge", "protection_factor"), 
+                         all.x = TRUE) %>% 
+  unique()
+
+
+
+missing_params <- setdiff(params, sim_params_step) #4131 rows
 colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor")
 
 saveRDS(missing_params, file = "missing_params.RDS")
