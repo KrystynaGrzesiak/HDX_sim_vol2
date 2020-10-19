@@ -28,9 +28,9 @@ params <- params_from_file %>%
 
 
 sim_params <- sim_results %>% 
-  select(Sequence, PH, Charge, PF, Exposure)
+  select(Sequence, PH, Charge, PF)
 
-colnames(sim_params) <- c("sequence", "pH", "charge", "protection_factor", "time")
+colnames(sim_params) <- c("sequence", "pH", "charge", "protection_factor")
 
 
 sim_params_step <- merge(x = sim_params, y = params, 
@@ -41,7 +41,7 @@ sim_params_step <- merge(x = sim_params, y = params,
 
 
 missing_params <- setdiff(params, sim_params_step) #4131 rows
-colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor")
+colnames(missing_params) <- c("sequence", "pH", "charge", "protection_factor", "size_of_time_step")
 
 saveRDS(missing_params, file = "missing_params.RDS")
 
