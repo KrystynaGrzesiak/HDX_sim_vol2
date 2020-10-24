@@ -4,131 +4,6 @@ library(powerHDX)
 setwd("~/HDX_sim_vol2/theo_spectra_sim")
 load("sysdata.rda")
 
-get_approx_isotopic_distribution = function(sequence, min_probability = 1e-3) {
-  h2_o_mass = 1.007825 * 2 + 15.994915
-  pC13 = 0.0111
-  pN15 = 0.00364
-  pO18 = 0.00205
-  pS34 = 0.04293
-  
-  peptide_mass = sum(AAmonoMass[sequence]) + h2_o_mass
-  n_carbon = sum(AAcarbonNum[sequence])
-  n_nitrogen = sum(AAnitrogenNum[sequence])
-  n_oxygen = sum(AAoxygenNum[sequence])
-  n_sulfer = sum(AAsulferNum[sequence])
-  
-  distC = dbinom(seq(0, n_carbon), n_carbon, pC13)
-  distN = dbinom(seq(0, n_nitrogen), n_nitrogen, pN15)
-  dist = dbinom(seq(0, n_oxygen), n_oxygen, pO18)
-  distO = rep(0, 2*n_oxygen + 1)
-  distO[seq(1, 2*n_oxygen + 1, 2)] = dist[1:(n_oxygen + 1)]
-  
-  if (!is.na(n_sulfer)) {
-    dist = dbinom(seq(0, n_sulfer), n_sulfer, pS34)
-    distS = rep(0, 2 * n_sulfer + 1)
-    distS[seq(1, 2*n_sulfer + 1, 2)] = dist[1:(n_sulfer + 1)]
-  } else {
-    distS = 1
-  }
-  
-  finalDist = sort(signal::conv(distS, signal::conv(distO, signal::conv(distC, distN))),
-                   decreasing = TRUE)
-  maxND = length(finalDist) - 1
-  
-  for (m in 3:(maxND + 1)) {
-    if (finalDist[m] < min_probability & finalDist[m - 1] < min_probability & finalDist[m - 2] >= min_probability) {
-      maxND = m - 3
-      break
-    }
-  }
-  
-  distND = finalDist[1:(maxND + 1)]
-  maxD = length(sequence)
-  maxD = maxD - sum(sequence[3:length(sequence)] == 'P')
-  
-  return(list(mass = peptide_mass,
-              isotopic_distribution = distND,
-              max_ND = maxND,
-              n_exchangeable = maxD))
-}
-
-
-
-look_for_big_vectors = function (sequence, charge = NULL, protection_factor = 1, times = c(60, 
-                                                                                           600), pH = 7.5, temperature = 15, n_molecules = 100, time_step_const = 1, 
-                                 if_corr = 0, min_probability = 1e-04) 
-{
-  sequence = strsplit(sequence, "")[[1]]
-  if (length(protection_factor) == 1L) {
-    protection_factor = rep(protection_factor, length(sequence))
-  }
-  if (is.null(charge)) {
-    charge = sample(2:6, 1)
-  }
-  peptide_iso_dist = get_approx_isotopic_distribution(sequence, 
-                                                      min_probability)
-  peptide_mass = peptide_iso_dist[[1]]
-  isotopic_probs = peptide_iso_dist[[2]]
-  maxND = peptide_iso_dist[[3]]
-  maxD = peptide_iso_dist[[4]]
-  kcHD = get_exchange_rates(sequence, "HD", pH, temperature, 
-                            "poly", if_corr)
-  kcDH = get_exchange_rates(sequence, "DH", pH, temperature, 
-                            "poly")
-  kmax = max(max(kcDH), max(kcHD))
-  deltaT = time_step_const/kmax
-  time_sequence = seq(0, max(times), deltaT)
-  if (time_sequence == 0 && length(time_sequence) == 1) {
-    print("There is no deuteration before given time point.")
-    isotope_dists = data.frame()
-  }
-  else {
-    tryCatch({
-      times_to_record = get_recording_times(time_sequence, 
-                                            times)
-      times_to_record = setdiff(times_to_record, 0)
-      transition_probs = get_exchange_probabilities(kcHD, 
-                                                    kcDH, deltaT, protection_factor)
-      HD_matrices = get_HD_matrices(sequence, transition_probs, 
-                                    time_sequence, times_to_record, n_molecules)
-      isotope_dists = lapply(1:length(times_to_record), 
-                             function(ith_time) {
-                               observed_dist = get_observed_iso_dist(HD_matrices[[ith_time]], 
-                                                                     isotopic_probs, maxD)
-                               observed_peaks = matrix(0, maxD + maxND + 1, 
-                                                       2)
-                               DM = 1.00628
-                               observed_peaks[1, 1] = peptide_mass/charge + 
-                                 1.007276
-                               observed_peaks[1, 2] = observed_dist[1]
-                               for (i in 2:(maxD + maxND + 1)) {
-                                 observed_peaks[i, 1] = observed_peaks[i - 
-                                                                         1, 1] + DM/charge
-                                 observed_peaks[i, 2] = observed_dist[i]
-                               }
-                               data.frame(Exposure = times[ith_time], Mz = observed_peaks[, 
-                                                                                          1], Intensity = observed_peaks[, 2], PH = pH)
-                             })
-      isotope_dists = do.call("rbind", isotope_dists)
-    }, print(paste(paste0(sequence), "pH:", pH, "PF : ", protection_factor, "charge: ", charge)))
-  }
-  isotope_dists = rbind(data.frame(Exposure = 0, Mz = peptide_mass/charge + 
-                                     1.007276, Intensity = isotopic_probs, PH = pH), isotope_dists)
-  isotope_dists[["Sequence"]] = paste0(sequence, collapse = "")
-  if (length(unique(protection_factor)) == 1) {
-    isotope_dists[["PF"]] = protection_factor[1]
-  }
-  else {
-    isotope_dists[["PF"]] = paste(protection_factor, 
-                                  sep = ",", collapse = ",")
-  }
-  isotope_dists[["Charge"]] = charge
-  isotope_dists = isotope_dists[isotope_dists[["Intensity"]] > 
-                                  min_probability, ]
-  data.table::as.data.table(isotope_dists)
-}
-
-
 
 sim_theo_spectra = function(all_params, n_cpus, times) {
   all_params$cpu = sample(1:n_cpus, nrow(all_params), replace = TRUE)
@@ -139,16 +14,17 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
     df_per_cpu$charge = as.numeric(as.character(df_per_cpu$charge))
     lapply(1:nrow(df_per_cpu), function(ith_row) {
       print(paste("Simulation", ith_row, "\n"))
-      res = tryCatch(look_for_big_vectors(sequence = df_per_cpu[ith_row, "sequence"],
-                                          charge = df_per_cpu[ith_row, "charge"],
-                                          protection_factor = df_per_cpu[ith_row, "protection_factor"],
-                                          times = times,
-                                          pH = df_per_cpu[ith_row, "pH"],
-                                          temperature = 15,
-                                          n_molecules = 500,
-                                          time_step_const = df_per_cpu[ith_row, "step"]),
+      res = tryCatch(simulate_theoretical_spectra(sequence = df_per_cpu[ith_row, "sequence"],
+                                                  charge = df_per_cpu[ith_row, "charge"],
+                                                  protection_factor = df_per_cpu[ith_row, "protection_factor"],
+                                                  times = times,
+                                                  pH = df_per_cpu[ith_row, "pH"],
+                                                  temperature = 15,
+                                                  n_molecules = 500,
+                                                  time_step_const = df_per_cpu[ith_row, "step"]),
                      error = function(e) {
                        print(e)
+                       print(paste(paste0(sequence), "pH:", pH, "PF : ", protection_factor, "charge: ", charge))
                        data.frame()})
     })
   }, mc.cores = n_cpus)
