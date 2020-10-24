@@ -24,7 +24,7 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
                                                   time_step_const = df_per_cpu[ith_row, "step"]),
                      error = function(e) {
                        print(e)
-                       print(paste(paste0(sequence), "pH:", pH, "PF : ", protection_factor, "charge: ", charge))
+                       print(paste(df_per_cpu[ith_row, "sequence"], "pH:", df_per_cpu[ith_row, "pH"], "PF : ", df_per_cpu[ith_row, "protection_factor"], "charge: ", df_per_cpu[ith_row, "charge"]))
                        data.frame()})
     })
   }, mc.cores = n_cpus)
