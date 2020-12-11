@@ -20,8 +20,7 @@ sim_theo_spectra = function(all_params, n_cpus, times) {
                                                         pH = df_per_cpu[ith_row, "pH"],
                                                         temperature = 15,
                                                         n_molecules = 500,
-                                                        time_step_const = df_per_cpu[ith_row, "step"],
-                                                        use_markov = TRUE),
+                                                        time_step_const = df_per_cpu[ith_row, "step"]),
                            error = function(e) {
                                print(e)
                                data.frame()})
