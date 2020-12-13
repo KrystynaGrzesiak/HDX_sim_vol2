@@ -1,0 +1,8 @@
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for 'system/R−3.6.1'
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Error: package or namespace load failed for ‘powerHDX’ in dyn.load(file, DLLpath = DLLpath, ...):
+ unable to load shared object '/home/krygrz/R-3.6.1/library/plyr/libs/plyr.so':
+  /usr/lib64/libstdc++.so.6: version `GLIBCXX_3.4.21' not found (required by /home/krygrz/R-3.6.1/library/plyr/libs/plyr.so)
+Execution halted
