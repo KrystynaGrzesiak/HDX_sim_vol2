@@ -51,13 +51,16 @@ get_power = function(spectra_list, n_cores) {
         }
         spectrum = spectrum[Exposure %in% possible_times[[time_constant[i, "n_timepoints"]]], ]
         tests_results = tryCatch({
-          noisy_curves = get_noisy_deuteration_curves(spectrum, reference = 1,
-                                                      n_runs = time_constant[i, "num_reps"],
-                                                      mass_deviations = time_constant[i, "mass_deviations"],
-                                                      per_run_deviations = per_run_deviation)
+          noisy_curves = get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,
+                                                      reference = "all",
+                                                      n_runs = 4,
+                                                      n_replicates = 100,
+                                                      mass_deviations = 5,
+                                                      per_run_deviations = 0.1)
           calculate_hdx_power(noisy_curves,
-                              list(deuteros, S1, S2, S3, S4, S5, S6, memhdx_model),
-                              0.05, summarized = FALSE)
+                              tests = list(deuteros, S1, S2, S3, S4, S5, S6, memhdx_model),
+                              significance_level  = 0.05, 
+                              summarized = FALSE)
         }, error = function(e) data.table::data.table())
         seq = as.character(unique(noisy_curves[[1]][[1]]$Sequence))
         n_runs = time_constant[i, "num_reps"]
