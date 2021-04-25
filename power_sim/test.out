@@ -10,29 +10,359 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
-Loading required package: nlme
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+$AAHLP
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
 
-Attaching package: ‘nlme’
+$AAHLPAEFTPAVH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
 
-The following object is masked from ‘package:dplyr’:
+$AHHFGKEFTPPV
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
 
-    collapse
+$AHVDDMPNALSALSDLH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
 
-This is mgcv 1.8-34. For overview type 'help("mgcv-package")'.
-Warning messages:
-1: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-2: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-3: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-4: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-5: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-6: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-7: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
-8: In newton(lsp = lsp, X = G$X, y = G$y, Eb = G$Eb, UrS = G$UrS, L = G$L,  :
-  Fitting terminated with step failure - check results carefully
+$ALSALSDL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$ARLTWASHEKMHEGDEGPGHHHKPGLGEGTP
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$ATLSEL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$CVLAHHFGKEFTPP
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$DKLHVD
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$DTNADKQLSF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$EFTPAVHASL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FESFGD
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FESFGDLST
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FLSFPTTKTYFPHFDLSHGSA
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FLSFPTTKTYFPHFDLSHGSAQVKGHGKK
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FRLLG
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FSDGLAH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$FSDGLAHLDNLKGT
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$GDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$GLAHLDNLKGTF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$GNPKVKAHGKKVLGA
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$HAHKLRVD
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$HASL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$HCDKLHVD
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$HVDPENF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$KSAVTAL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$KTNVKAAWGKVGAHAGEYGAEAL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$LDNLKGTF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$LVVYPW
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$LWGKVNVDEVGGEALGR
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$MGNPKVKAHGKKVLGAFSDGLAHL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$NALAHKYH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$PAVH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$PDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$PEEKSAV
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$SALSDLHAHKLRVDPVNF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$SALSDLHAHKLRVDPVNFKLLSHCLL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$SELH
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$STPDAVMGNPKVKAHGKKVLGA
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$TCKMSQL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$TIINTFHQY
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$TKTYFPHF
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$TPAVHASL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$TPDAVMGNPKVKAHGKKVLGA
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$VCVLAHHFGKE
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$VGGEALGRL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$VLAHHFGKEFTPPV
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$VLSPADKTNVKAAWGKVGAHAGE
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+$WGKVNVDEVGGEAL
+[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in nrow(time_constant): object 'time_constant' not found>
+
+Warning message:
+In mclapply(spectra_list, function(spectrum) { :
+  all scheduled cores encountered errors in user code
