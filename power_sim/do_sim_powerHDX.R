@@ -31,43 +31,32 @@ theoretical_spectra <- do.call(rbind, lapply(1:nrow(all_params), function(ith_ro
                                pH = all_params[ith_row, "pH"],
                                temperature = 15,
                                n_molecules = 500,
-                               time_step_const = all_params[ith_row, "step"],
+                               time_step_const = 1,
                                use_markov = TRUE)
 }))
 
 spectra_by_seq <- split(theoretical_spectra, 
                         f = theoretical_spectra[, c("Sequence")])
 
-
+print("Spectra ok!")
 
 get_power = function(spectra_list, n_cores) {
   mclapply(
     spectra_list, function(spectrum) {
-      for (i in 1:nrow(time_constant)) {
-        if (is.na(time_constant[i, "per_run_deviations"])) {
-          per_run_deviation = NULL
-        } else {
-          per_run_deviation = time_constant[i, "per_run_deviations"]
-        }
-        spectrum = spectrum[Exposure %in% possible_times[[time_constant[i, "n_timepoints"]]], ]
-        tests_results = tryCatch({
-          noisy_curves = get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,
-                                                      reference = "all",
-                                                      n_runs = 4,
-                                                      n_replicates = 100,
-                                                      mass_deviations = 5,
-                                                      per_run_deviations = 0.1)
-          calculate_hdx_power(noisy_curves,
-                              tests = list(deuteros, S1, S2, S3, S4, S5, S6, memhdx_model),
-                              significance_level  = 0.05, 
-                              summarized = FALSE)
-        }, error = function(e) data.table::data.table())
-        seq = as.character(unique(noisy_curves[[1]][[1]]$Sequence))
-        n_runs = time_constant[i, "num_reps"]
-        n_times = length(possible_times[[time_constant[i, "n_timepoints"]]])
-        mass_deviations = time_constant[i, "mass_deviations"]
-        saveRDS(tests_results, file = paste("./results/", seq, n_runs, n_times, mass_deviations, per_run_deviation, ".RDS", sep = "_"))
-      }
+      tests_results = tryCatch({
+        noisy_curves = get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,
+                                                    reference = "all",
+                                                    n_runs = 4,
+                                                    n_replicates = 100,
+                                                    mass_deviations = 5,
+                                                    per_run_deviations = 0.1)
+        calculate_hdx_power(noisy_curves,
+                            tests = list(deuteros, S1, S2, S3, S4, S5, S6, memhdx_model),
+                            significance_level  = 0.05, 
+                            summarized = FALSE)
+      }, error = function(e) data.table::data.table())
+      seq = as.character(unique(noisy_curves[[1]][[1]]$Sequence))
+      saveRDS(tests_results, file = paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"))
     }, mc.cores = n_cores
   )
 }
