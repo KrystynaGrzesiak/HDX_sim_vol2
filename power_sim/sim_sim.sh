@@ -6,4 +6,4 @@
 module purge
 module load system/R−3.6.1
 
-~/R-3.6.1/bin/Rscript do_sim.R
+~/R-3.6.1/bin/Rscript do_sim_powerHDX.R
