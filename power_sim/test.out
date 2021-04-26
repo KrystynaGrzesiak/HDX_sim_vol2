@@ -13,356 +13,267 @@ The following objects are masked from ‘package:base’:
 Loading required package: foreach
 Loading required package: iterators
 Loading required package: parallel
+slurmstepd: *** JOB 20355212 CANCELLED AT 2021-04-26T03:14:52 DUE TO NODE phi8 FAILURE ***
+[1] "Spectra ok!"
+slurmstepd: get_exit_code task 0 died by signal
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in truncated_lines(x, knots[knot]): object 'x' not found>
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State, data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure), data = data, method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure + s(id, bs = "re"), data = data,     method = "REML"): could not find function "gam">
+<simpleError in gam(Mass ~ s(Exposure) + Exposure * State + s(id, bs = "re") +     s(id, Exposure, bs = "re"), data = example_data, method = "REML"): could not find function "gam">
 $AAHLP
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $AAHLPAEFTPAVH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $AHHFGKEFTPPV
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $AHVDDMPNALSALSDLH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $ALSALSDL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $ARLTWASHEKMHEGDEGPGHHHKPGLGEGTP
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $ATLSEL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $CVLAHHFGKEFTPP
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $DKLHVD
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $DTNADKQLSF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $EFTPAVHASL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FESFGD
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FESFGDLST
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FLSFPTTKTYFPHFDLSHGSA
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FLSFPTTKTYFPHFDLSHGSAQVKGHGKK
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FRLLG
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $FSDGLAH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $FSDGLAHLDNLKGT
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $GDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $GLAHLDNLKGTF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $GNPKVKAHGKKVLGA
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $HAHKLRVD
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $HASL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $HCDKLHVD
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $HVDPENF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $KSAVTAL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $KTNVKAAWGKVGAHAGEYGAEAL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $LDNLKGTF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $LVVYPW
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $LWGKVNVDEVGGEALGR
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $MGNPKVKAHGKKVLGAFSDGLAHL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $NALAHKYH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $PAVH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $PDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $PEEKSAV
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $SALSDLHAHKLRVDPVNF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $SALSDLHAHKLRVDPVNFKLLSHCLL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $SELH
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $STPDAVMGNPKVKAHGKKVLGA
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $TCKMSQL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $TIINTFHQY
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $TKTYFPHF
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $TPAVHASL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $TPDAVMGNPKVKAHGKKVLGA
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $VCVLAHHFGKE
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $VGGEALGRL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $VLAHHFGKEFTPPV
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
 $VLSPADKTNVKAAWGKVGAHAGE
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
+[1] "Error in paste(\"./results/\", seq, n_runs, n_times, \".RDS\", sep = \"_\") : \n  object 'n_runs' not found\n"
 attr(,"class")
 [1] "try-error"
 attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+<simpleError in paste("./results/", seq, n_runs, n_times, ".RDS", sep = "_"): object 'n_runs' not found>
 
 $WGKVNVDEVGGEAL
-[1] "Error in nrow(time_constant) : object 'time_constant' not found\n"
-attr(,"class")
-[1] "try-error"
-attr(,"condition")
-<simpleError in nrow(time_constant): object 'time_constant' not found>
+NULL
 
-Warning message:
-In mclapply(spectra_list, function(spectrum) { :
-  all scheduled cores encountered errors in user code
+Warning messages:
+1: In mclapply(spectra_list, function(spectrum) { :
+  scheduled cores 2, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 18, 19, 20, 21, 22, 23, 28, 30, 31, 32 did not deliver results, all values of the jobs will be affected
+2: In mclapply(spectra_list, function(spectrum) { :
+  scheduled cores 24, 17, 27, 1, 29, 26, 9, 25, 3 encountered errors in user code, all values of the jobs will be affected
