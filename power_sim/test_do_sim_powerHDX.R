@@ -3,9 +3,10 @@ library(powerHDX)
 library(dplyr)
 library(doParallel)
 library(mgcv)
+library(data.table)
 
 
-new_pf <- c(10, 15, 20, 30, 40, 45, 50, seq(100, 2000, 100))
+new_pf <- c(10, 15, 20, 30)
 times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
 
@@ -42,14 +43,14 @@ spectra_by_seq <- split(theoretical_spectra,
 
 print("Spectra ok!")
 
-get_power = function(spectra_list, n_cores) {
-  mclapply(
+get_power = function(spectra_list) {
+  lapply(
     spectra_list, function(spectrum) {
       tests_results = tryCatch({
         noisy_curves = get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,
                                                     reference = "all",
                                                     n_runs = 4,
-                                                    n_replicates = 100,
+                                                    n_replicates = 1,
                                                     mass_deviations = 5,
                                                     per_run_deviations = 0.1)
         calculate_hdx_power(noisy_curves,
@@ -59,11 +60,11 @@ get_power = function(spectra_list, n_cores) {
       }, error = function(e) data.table::data.table())
       seq = as.character(unique(noisy_curves[[1]][[1]]$Sequence))
       saveRDS(tests_results, file = paste("./results/", seq, "power.RDS", sep = "_"))
-    }, mc.cores = n_cores
+    }
   )
 }
 
 cores = detectCores()
 
-get_power(spectra_by_seq, cores)
+get_power(spectra_by_seq)
 
