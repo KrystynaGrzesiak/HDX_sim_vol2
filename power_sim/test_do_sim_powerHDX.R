@@ -11,7 +11,7 @@ times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
 
 set.seed(17)
 params <- readRDS("./all_params.RDS")
-sequences <- sample(unique(params$sequence), 50, replace = FALSE)
+sequences <- sample(unique(params$sequence), 1, replace = FALSE)
 
 all_params <- params %>% 
   dplyr::select(sequence, pH, step) %>% 
@@ -20,7 +20,7 @@ all_params <- params %>%
   group_by(sequence) %>% 
   slice(rep(1:n(), each = length(new_pf))) %>% 
   mutate(protection_factor = new_pf) %>% 
-  mutate(charge = sample(1:5,length(new_pf),  replace = TRUE)) %>% 
+  # mutate(charge = sample(1:5,length(new_pf),  replace = TRUE)) %>% 
   ungroup() %>% 
   data.frame()
 
