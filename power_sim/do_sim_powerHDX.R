@@ -53,7 +53,7 @@ get_power = function(spectra_list, n_cores) {
                                                     mass_deviations = 5,
                                                     per_run_deviations = 0.1)
         calculate_hdx_power(noisy_curves,
-                            tests = list(deuteros, S1, S2, S3, S4, S5, S6, memhdx_model),
+                            tests = list(deuteros, S2_by_1, S2_by_2, S2_by_4, S2_1),
                             significance_level  = 0.05, 
                             summarized = FALSE)
       }, error = function(e) data.table::data.table())
