@@ -23,3 +23,5 @@ The following object is masked from ‘package:dplyr’:
 
 This is mgcv 1.8-35. For overview type 'help("mgcv-package")'.
 [1] "Spectra ok!"
+slurmstepd: *** JOB 20355237 CANCELLED AT 2021-04-26T22:57:55 *** on phi6
+slurmstepd: get_exit_code task 0 died by signal
