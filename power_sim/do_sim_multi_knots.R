@@ -26,7 +26,6 @@ all_params <- params %>%
   group_by(sequence) %>% 
   slice(rep(1:n(), each = length(new_pf))) %>% 
   mutate(protection_factor = new_pf) %>% 
-  # mutate(charge = sample(1:5,length(new_pf),  replace = TRUE)) %>% 
   ungroup() %>% 
   data.frame()
 
@@ -62,7 +61,10 @@ get_power = function(spectra_list) {
                             tests = list(deuteros, S_multi_knots),
                             significance_level  = 0.05, 
                             summarized = FALSE)
-      }, error = function(e) data.table::data.table())
+      }, error = function(e) {
+        print(e)
+        data.table::data.table()
+        })
       seq = as.character(unique(noisy_curves[[1]][[1]]$Sequence))
       saveRDS(tests_results, file = paste("./results_multi_knots/", seq, "power.RDS", sep = "_"))
     }
