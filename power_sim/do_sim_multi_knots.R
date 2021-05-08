@@ -17,7 +17,7 @@ times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
 
 set.seed(17)
 params <- readRDS("./all_params.RDS")
-sequences <- sample(unique(params$sequence), 1, replace = FALSE)
+sequences <- sample(unique(params$sequence), 50, replace = FALSE)
 
 all_params <- params %>% 
   dplyr::select(sequence, pH, step) %>% 
