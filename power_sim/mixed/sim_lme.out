@@ -1,0 +1,413 @@
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for 'system/R−3.6.1'
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: nlme
+
+Attaching package: ‘nlme’
+
+The following object is masked from ‘package:dplyr’:
+
+    collapse
+
+This is mgcv 1.8-35. For overview type 'help("mgcv-package")'.
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+Packages in library ‘/home/krygrz/R-3.6.1/library’:
+
+askpass                 Safe Password Entry for R, Git, and SSH
+assertthat              Easy Pre and Post Assertions
+backports               Reimplementations of Functions Introduced Since
+                        R-3.0.0
+base                    The R Base Package
+base64enc               Tools for base64 encoding
+BH                      Boost C++ Header Files
+boot                    Bootstrap Functions (Originally by Angelo Canty
+                        for S)
+brew                    Templating Framework for Report Generation
+brio                    Basic R Input Output
+callr                   Call R from R
+class                   Functions for Classification
+cli                     Helpers for Developing Command Line Interfaces
+clipr                   Read and Write from the System Clipboard
+cluster                 "Finding Groups in Data": Cluster Analysis
+                        Extended Rousseeuw et al.
+codetools               Code Analysis Tools for R
+colorspace              A Toolbox for Manipulating and Assessing Colors
+                        and Palettes
+commonmark              High Performance CommonMark and Github Markdown
+                        Rendering in R
+compiler                The R Compiler Package
+covr                    Test Coverage for Packages
+crayon                  Colored Terminal Output
+crosstalk               Inter-Widget Interactivity for HTML Widgets
+curl                    A Modern and Flexible Web Client for R
+datasets                The R Datasets Package
+data.table              Extension of `data.frame`
+desc                    Manipulate DESCRIPTION Files
+devtools                Tools to Make Developing R Packages Easier
+diffobj                 Diffs for R Objects
+digest                  Create Compact Hash Digests of R Objects
+doParallel              Foreach Parallel Adaptor for the 'parallel'
+                        Package
+dplyr                   A Grammar of Data Manipulation
+DT                      A Wrapper of the JavaScript Library
+                        'DataTables'
+ellipsis                Tools for Working with ...
+evaluate                Parsing and Evaluation Tools that Provide More
+                        Details than the Default
+expm                    Matrix Exponential, Log, 'etc'
+fansi                   ANSI Control Sequence Aware String Functions
+farver                  High Performance Colour Space Manipulation
+foreach                 Provides Foreach Looping Construct
+foreign                 Read Data Stored by 'Minitab', 'S', 'SAS',
+                        'SPSS', 'Stata', 'Systat', 'Weka', 'dBase', ...
+fs                      Cross-Platform File System Operations Based on
+                        'libuv'
+generics                Common S3 Generics not Provided by Base R
+                        Methods Related to Model Fitting
+ggplot2                 Create Elegant Data Visualisations Using the
+                        Grammar of Graphics
+gh                      'GitHub' 'API'
+git2r                   Provides Access to Git Repositories
+glue                    Interpreted String Literals
+graphics                The R Graphics Package
+grDevices               The R Graphics Devices and Support for Colours
+                        and Fonts
+grid                    The Grid Graphics Package
+gtable                  Arrange 'Grobs' in Tables
+highr                   Syntax Highlighting for R Source Code
+htmltools               Tools for HTML
+htmlwidgets             HTML Widgets for R
+httr                    Tools for Working with URLs and HTTP
+igraph                  Network Analysis and Visualization
+ini                     Read and Write '.ini' Files
+isoband                 Generate Isolines and Isobands from Regularly
+                        Spaced Elevation Grids
+iterators               Provides Iterator Construct
+jsonlite                A Simple and Robust JSON Parser and Generator
+                        for R
+KernSmooth              Functions for Kernel Smoothing Supporting Wand
+                        & Jones (1995)
+knitr                   A General-Purpose Package for Dynamic Report
+                        Generation in R
+labeling                Axis Labeling
+later                   Utilities for Scheduling Functions to Execute
+                        Later with Event Loops
+lattice                 Trellis Graphics for R
+lazyeval                Lazy (Non-Standard) Evaluation
+lifecycle               Manage the Life Cycle of your Package Functions
+lme4                    Linear Mixed-Effects Models using 'Eigen' and
+                        S4
+lmerTest                Tests in Linear Mixed Effects Models
+magrittr                A Forward-Pipe Operator for R
+markdown                Render Markdown with the C Library 'Sundown'
+markovchain             Easy Handling Discrete Time Markov Chains
+MASS                    Support Functions and Datasets for Venables and
+                        Ripley's MASS
+matlab                  MATLAB emulation package
+Matrix                  Sparse and Dense Matrix Classes and Methods
+memoise                 Memoisation of Functions
+methods                 Formal Methods and Classes
+mgcv                    Mixed GAM Computation Vehicle with Automatic
+                        Smoothness Estimation
+microbenchmark          Accurate Timing Functions
+mime                    Map Filenames to MIME Types
+minqa                   Derivative-free optimization algorithms by
+                        quadratic approximation
+munsell                 Utilities for Using Munsell Colours
+nlme                    Linear and Nonlinear Mixed Effects Models
+nloptr                  R Interface to NLopt
+nnet                    Feed-Forward Neural Networks and Multinomial
+                        Log-Linear Models
+numDeriv                Accurate Numerical Derivatives
+openssl                 Toolkit for Encryption, Signatures and
+                        Certificates Based on OpenSSL
+parallel                Support for Parallel computation in R
+pillar                  Coloured Formatting for Columns
+pkgbuild                Find Tools Needed to Build R Packages
+pkgconfig               Private Configuration for 'R' Packages
+pkgload                 Simulate Package Installation and Attach
+plyr                    Tools for Splitting, Applying and Combining
+                        Data
+powerHDX                Efficient simulation of HDX-MS data
+praise                  Praise Users
+prettyunits             Pretty, Human Readable Formatting of Quantities
+processx                Execute and Control System Processes
+promises                Abstractions for Promise-Based Asynchronous
+                        Programming
+ps                      List, Query, Manipulate System Processes
+purrr                   Functional Programming Tools
+R6                      Encapsulated Classes with Reference Semantics
+rcmdcheck               Run 'R CMD check' from 'R' and Capture Results
+RColorBrewer            ColorBrewer Palettes
+Rcpp                    Seamless R and C++ Integration
+RcppArmadillo           'Rcpp' Integration for the 'Armadillo'
+                        Templated Linear Algebra Library
+RcppEigen               'Rcpp' Integration for the 'Eigen' Templated
+                        Linear Algebra Library
+RcppParallel            Parallel Programming Tools for 'Rcpp'
+rematch2                Tidy Output from Regular Expression Matching
+remotes                 R Package Installation from Remote
+                        Repositories, Including 'GitHub'
+rex                     Friendly Regular Expressions
+rlang                   Functions for Base Types and Core R and
+                        'Tidyverse' Features
+roxygen2                In-Line Documentation for R
+rpart                   Recursive Partitioning and Regression Trees
+rprojroot               Finding Files in Project Subdirectories
+rstudioapi              Safely Access the RStudio API
+rversions               Query 'R' Versions, Including 'r-release' and
+                        'r-oldrel'
+scales                  Scale Functions for Visualization
+sessioninfo             R Session Information
+signal                  Signal Processing
+spatial                 Functions for Kriging and Point Pattern
+                        Analysis
+splines                 Regression Spline Functions and Classes
+statmod                 Statistical Modeling
+stats                   The R Stats Package
+stats4                  Statistical Functions using S4 Classes
+stringi                 Character String Processing Facilities
+stringr                 Simple, Consistent Wrappers for Common String
+                        Operations
+survival                Survival Analysis
+sys                     Powerful and Reliable Tools for Running System
+                        Commands in R
+tcltk                   Tcl/Tk Interface
+testthat                Unit Testing for R
+tibble                  Simple Data Frames
+tidyselect              Select from a Set of Strings
+tools                   Tools for Package Development
+usethis                 Automate Package and Project Setup
+utf8                    Unicode Text Processing
+utils                   The R Utils Package
+vctrs                   Vector Helpers
+viridisLite             Default Color Maps from 'matplotlib' (Lite
+                        Version)
+waldo                   Find Differences Between R Objects
+whisker                 {{mustache}} for R, Logicless Templating
+withr                   Run Code 'With' Temporarily Modified Global
+                        State
+xfun                    Miscellaneous Functions by 'Yihui Xie'
+xml2                    Parse XML
+xopen                   Open System Files, 'URLs', Anything
+yaml                    Methods to Convert R Data to YAML and Back
+
+[1] "Spectra ok!"
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
+$AAHLP
+NULL
+
+$AAHLPAEFTPAVH
+NULL
+
+$AHHFGKEFTPPV
+NULL
+
+$AHVDDMPNALSALSDLH
+NULL
+
+$ALSALSDL
+NULL
+
+$ARLTWASHEKMHEGDEGPGHHHKPGLGEGTP
+NULL
+
+$ATLSEL
+NULL
+
+$CVLAHHFGKEFTPP
+NULL
+
+$DKLHVD
+NULL
+
+$DTNADKQLSF
+NULL
+
+$EFTPAVHASL
+NULL
+
+$FESFGD
+NULL
+
+$FESFGDLST
+NULL
+
+$FESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNL
+NULL
+
+$FLSFPTTKTYFPHFDLSHGSA
+NULL
+
+$FLSFPTTKTYFPHFDLSHGSAQVKGHGKK
+NULL
+
+$FRLLG
+NULL
+
+$FSDGLAH
+NULL
+
+$FSDGLAHLDNLKGT
+NULL
+
+$GDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTF
+NULL
+
+$GLAHLDNLKGTF
+NULL
+
+$GNPKVKAHGKKVLGA
+NULL
+
+$HAHKLRVD
+NULL
+
+$HASL
+NULL
+
+$HCDKLHVD
+NULL
+
+$HVDPENF
+NULL
+
+$KSAVTAL
+NULL
+
+$KTNVKAAWGKVGAHAGEYGAEAL
+NULL
+
+$LDNLKGTF
+NULL
+
+$LVVYPW
+NULL
+
+$LWGKVNVDEVGGEALGR
+NULL
+
+$MGNPKVKAHGKKVLGAFSDGLAHL
+NULL
+
+$NALAHKYH
+NULL
+
+$PAVH
+NULL
+
+$PDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATL
+NULL
+
+$PEEKSAV
+NULL
+
+$SALSDLHAHKLRVDPVNF
+NULL
+
+$SALSDLHAHKLRVDPVNFKLLSHCLL
+NULL
+
+$SELH
+NULL
+
+$STPDAVMGNPKVKAHGKKVLGA
+NULL
+
+$TCKMSQL
+NULL
+
+$TIINTFHQY
+NULL
+
+$TKTYFPHF
+NULL
+
+$TPAVHASL
+NULL
+
+$TPDAVMGNPKVKAHGKKVLGA
+NULL
+
+$VCVLAHHFGKE
+NULL
+
+$VGGEALGRL
+NULL
+
+$VLAHHFGKEFTPPV
+NULL
+
+$VLSPADKTNVKAAWGKVGAHAGE
+NULL
+
+$WGKVNVDEVGGEAL
+NULL
+
