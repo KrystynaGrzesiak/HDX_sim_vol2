@@ -1,7 +1,5 @@
 
-source("multi_knots.R")
-
-
+source("./multi_knots.R")
 
 
 library(powerHDX)
@@ -16,7 +14,7 @@ times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
 
 set.seed(17)
-params <- readRDS("./all_params.RDS")
+params <- readRDS("../all_params.RDS")
 sequences <- sample(unique(params$sequence), 50, replace = FALSE)
 
 all_params <- params %>% 

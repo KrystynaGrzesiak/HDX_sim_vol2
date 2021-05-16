@@ -39,7 +39,6 @@ p +
             ymin = -Inf, ymax = Inf, alpha = 0)
 
 
-
 sim_results %>% 
   filter(Time != "categorical" | is.na(Time)) %>% 
   select(-Time) %>% 
@@ -58,8 +57,22 @@ sim_results %>%
   theme(axis.text.x=element_blank(),
         axis.title.x=element_blank()) +
   theme(plot.title = element_text(hjust = 0.5)) +
-  scale_fill_brewer(palette="Paired") +
   geom_label(aes(label = formatC(Power, digits = 2, width = 4)))
+
+
+
+sim_results %>% 
+  select(Test, State_1, State_2, Significant_difference)
+
+
+
+
+
+
+
+
+
+
 
 
 
