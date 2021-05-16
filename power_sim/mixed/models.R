@@ -37,7 +37,7 @@ Mixed_multi_knots_rep <- function(data, significance_level = 0.05) {
                                      REML = FALSE)
       result = anova(model, model_reduced)
       aic = AIC(model)
-      loglik = logLik(model)
+      loglik = as.numeric(logLik(model))
       Test_statistic = result$Chisq[2]
       p_value = result$`Pr(>Chisq)`[2]
       
@@ -99,7 +99,7 @@ Mixed_multi_knots_id <- function(data, significance_level = 0.05) {
                                      REML = FALSE)
       result = anova(model, model_reduced)
       aic = AIC(model)
-      loglik = logLik(model)
+      loglik = as.numeric(logLik(model))
       Test_statistic = result$Chisq[2]
       p_value = result$`Pr(>Chisq)`[2]
       
