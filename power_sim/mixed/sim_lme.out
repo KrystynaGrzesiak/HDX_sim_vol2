@@ -211,56 +211,6 @@ xopen                   Open System Files, 'URLs', Anything
 yaml                    Methods to Convert R Data to YAML and Back
 
 [1] "Spectra ok!"
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
-<simpleError in data.table::rbindlist(all_tests): Class attribute on column 14 of item 2 does not match with column 14 of item 1.>
 $AAHLP
 NULL
 
