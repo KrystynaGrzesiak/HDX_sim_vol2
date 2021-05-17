@@ -33,7 +33,7 @@ select_results <- function(data, diff = 0.01) {
 
 
 p <- sim_results %>% 
-  select_results(diff = 0.5) %>% 
+  select_results(diff = 0.05) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +

@@ -7,9 +7,9 @@ files <- list.files(path = "./results", pattern = "\\.RDS$", full.names = TRUE)
 results <- do.call("rbind", lapply(files, readRDS))
 
 results <- results %>% 
-  filter(Transformation == "identity") %>% 
+  filter(Transformation == "log") %>% 
   mutate(Test_id = paste0(Test, "_", Transformation)) %>%
-  filter(Time != "categorical" | is.na(Time)) %>% 
+  filter(Time != "categorical" | is.na(Time), Test_id != "Deuteros lm_identity") %>% 
   select(-Time)
 
 sim_results = results %>% 
@@ -24,7 +24,7 @@ select_results <- function(data, diff = 0.01) {
     filter(State_1 == State_2) %>% 
     group_by(Test_id) %>% 
     summarise(m_error = mean(Power)) %>% 
-    filter(m_error <= m_error[Test_id == "Deuteros lm_identity"] + diff) %>% 
+    filter(m_error <= m_error[Test_id == "Deuteros lm_log"] + diff) %>% 
     select(Test_id)
   
   data %>% 
@@ -33,7 +33,7 @@ select_results <- function(data, diff = 0.01) {
 
 
 p <- sim_results %>% 
-  select_results(diff = 0.5) %>% 
+  select_results(diff = 0) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +
@@ -72,16 +72,11 @@ p +
 
 
 
-
-
-
-
-
 pfs <- c(10, 15, 90, 100, 200)
 
 
 p <- sim_results %>% 
-  select_results(diff = 0.1) %>% 
+  select_results(diff = 0) %>% 
   filter(State_1 %in% pfs, State_2 %in% pfs) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
@@ -108,6 +103,8 @@ data_col <- results %>%
 p + 
   geom_rect(data = data_col, col = "black", fill = "white", xmin = -Inf, xmax = Inf, 
             ymin = -Inf, ymax = Inf, alpha = 0)
+
+
 
 
 

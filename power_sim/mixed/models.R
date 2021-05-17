@@ -45,7 +45,7 @@ Mixed_multi_knots_rep <- function(data, significance_level = 0.05) {
       if(trans == "log") {
         Test = paste0("Spline_", exp(knots[knot])-1, "_rep")
       } else {
-        Test = knots[knot]
+        Test = paste0(knots[knot], "_rep")
       }
       
       data.table::data.table(Test = Test,
@@ -107,7 +107,7 @@ Mixed_multi_knots_id <- function(data, significance_level = 0.05) {
       if(trans == "log") {
         Test = paste0("Spline_", exp(knots[knot])-1, "_id")
       } else {
-        Test = knots[knot]
+        Test = paste0(knots[knot], "_id")
       }
       
       data.table::data.table(Test = Test,
