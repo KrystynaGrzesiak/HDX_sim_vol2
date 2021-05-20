@@ -7,9 +7,9 @@ files <- list.files(path = "./results", pattern = "\\.RDS$", full.names = TRUE)
 results <- do.call("rbind", lapply(files, readRDS))
 
 results <- results %>% 
-  filter(Transformation == "identity") %>% 
+  filter(Transformation == "log") %>% 
   mutate(Test_id = paste0(Test, "_", Transformation)) %>%
-  filter(Time != "categorical" | is.na(Time)) %>% 
+  filter(Time != "categorical" | is.na(Time), Test_id != "Deuteros lm_identity") %>% 
   select(-Time)
 
 sim_results = results %>% 
@@ -24,7 +24,7 @@ select_results <- function(data, diff = 0.01) {
     filter(State_1 == State_2) %>% 
     group_by(Test_id) %>% 
     summarise(m_error = mean(Power)) %>% 
-    filter(m_error <= m_error[Test_id == "Deuteros lm_identity"] + diff) %>% 
+    filter(m_error <= m_error[Test_id == "Deuteros lm_log"] + diff) %>% 
     select(Test_id)
   
   data %>% 
@@ -33,7 +33,7 @@ select_results <- function(data, diff = 0.01) {
 
 
 p <- sim_results %>% 
-  select_results(diff = 0.05) %>% 
+  select_results(diff = 0) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +
@@ -72,34 +72,19 @@ p +
 
 
 
-
-
-
-
-
-pfs <- c(10, 15, 40, 50, 90, 100, 200)
-
-
-# New facet label names for dose variable
-pf1.labs <- paste("PF1 =", pfs)
-names(pf1.labs) <- as.character(pfs)
-
-# New facet label names for supp variable
-pf2.labs <- paste("PF2 =", pfs)
-names(pf2.labs) <- as.character(pfs)
+pfs <- c(10, 15, 90, 100, 200)
 
 
 p <- sim_results %>% 
   select_results(diff = 0) %>% 
-  filter(State_1 %in% pfs, State_2 %in% pfs) %>%
-  filter(Test_id %in% c("2100_id_identity", "2400_id_identity", "3600_id_identity", "Deuteros lm_identity")) %>% 
+  filter(State_1 %in% pfs, State_2 %in% pfs) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +
   theme_minimal() +
   ylim(0, 1.15) +
   # geom_text(aes(label=Power), position=position_dodge(width=0.9), vjust=-0.25, size = 3) +
-  facet_grid(State_1~State_2, labeller = labeller(State_2 = pf1.labs, State_1 = pf2.labs)) +
+  facet_grid(State_1~State_2) +
   ggtitle("Rejection rate in pairwise testing") +
   theme(axis.text.x=element_blank(),
         axis.title.x=element_blank()) +
@@ -109,7 +94,6 @@ p <- sim_results %>%
 
 data_col <- results %>% 
   mutate(Test_id = paste0(Test, "_", Transformation)) %>% 
-  filter(Test_id %in% c("2100_id_identity", "2400_id_identity", "3600_id_identity", "Deuteros lm_identity")) %>% 
   filter(State_1 %in% pfs, State_2 %in% pfs) %>% 
   group_by(Test_id, State_1, State_2) %>% 
   summarise(Power = round(mean(Significant_difference, na.rm = TRUE), 2)) %>% 
@@ -119,5 +103,15 @@ data_col <- results %>%
 p + 
   geom_rect(data = data_col, col = "black", fill = "white", xmin = -Inf, xmax = Inf, 
             ymin = -Inf, ymax = Inf, alpha = 0)
+
+
+
+
+
+
+
+
+
+
 
 
