@@ -14,7 +14,7 @@ S_reg <- function(data, significance_level = 0.05) {
   States = unique(data$State)
   
   aic = loglik = Test_statistic = p_value = rep(NA, 2)
-  data[["Exposure"]] = log(data[["Exposure"]] + 1)
+  data[["Exposure"]] = data[["Exposure"]]
   
   knots <- unique(setdiff(data$Exposure, c(max(data$Exposure), min(data$Exposure))))
   
@@ -22,21 +22,30 @@ S_reg <- function(data, significance_level = 0.05) {
     truncated_lines(data$Exposure, knots[knot])
   })
   
-  design_matrix <- cbind(data[["Experimental_state"]] == "A", 
+  design_matrix <- cbind(data[["Exposure"]],
+                         data[["Experimental_state"]] == "A", 
                          X, 
                          data[["Exposure"]]*(data[["Experimental_state"]] == "A"))
   
-  colnames(design_matrix) <- c("State", as.character(knots), "Exposure_State")
+  colnames(design_matrix) <- c("Exposure", "State", as.character(knots), "Exposure_State")
   
   cv_fit <- cv.glmnet(design_matrix, data[["Mass"]], alpha = 1)
   
   m1 <- glmnet(design_matrix, data[["Mass"]], 
-               alpha = 1, 
-               lambda = 0.01)
+               alpha = 0,
+               lambda = 0.005)
   
+  m2 <- glmnet(design_matrix[, -c(2, 22)], data[["Mass"]], 
+               alpha = 0,
+               lambda = 0.005)
+  
+  anova(m1, m2)
+  
+  
+  res <- summary(cv_fit)
+  coef(cv_fit)
   
   summary(m1)
-  coef(m1)
   
   
   result = anova(model, model_reduced)

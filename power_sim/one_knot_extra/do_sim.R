@@ -13,9 +13,9 @@ new_pf <- c(10, 15, 20, 30, 40, 50, 90, 100, 200, 210)
 times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
 
-set.seed(17)
+set.seed(20)
 params <- readRDS("../all_params.RDS")
-sequences <- sample(unique(params$sequence), 50, replace = FALSE)
+sequences <- sample(unique(params$sequence), 100, replace = FALSE)
 
 all_params <- params %>% 
   dplyr::select(sequence, pH, step) %>% 
