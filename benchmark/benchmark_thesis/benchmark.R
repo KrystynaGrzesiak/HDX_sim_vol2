@@ -44,7 +44,7 @@ sample_data <- params %>%
 lapply(1:nrow(sample_data), function(i) {
   benchmark_markov <- microbenchmark({simulate_markov(sample_data[i, ])},
                                      times = 10)
-  benchmark_rcpp <- microbenchmark({simulate_rcpp(sample_data[i, ])}
+  benchmark_rcpp <- microbenchmark({simulate_rcpp(sample_data[i, ])},
                                    times = 10)
   
   res <- data.frame(markov_times = benchmark_markov$time,
