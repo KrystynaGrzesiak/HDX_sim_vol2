@@ -86,9 +86,8 @@ Mixed_multi_knots_id <- function(data, significance_level = 0.05) {
     Test = aic = loglik = Test_statistic = p_value = rep(NA, length(knots))
     
     data.table::data.table(do.call(rbind, lapply(1:length(knots), function(knot) {
-      X <- sapply(1:length(knot), function(k) {
-        truncated_lines(transformed_data$Exposure, knot[k])
-      })
+      
+      X <- truncated_lines(transformed_data$Exposure, knots[knot])
       
       # continuous, identity
       model = lmerTest::lmer(Mass ~ Exposure*State + (1|id) + X,
