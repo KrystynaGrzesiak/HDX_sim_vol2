@@ -1,5 +1,6 @@
 
 library(glmnet)
+library(SLOPE)
 
 
 truncated_lines <- function(x, kappa){
@@ -74,5 +75,4 @@ S_lasso_ridge <- function(data, significance_level = 0.05) {
                          AIC = aic,
                          logLik = loglik)
 }
-
 
