@@ -32,8 +32,23 @@ select_results <- function(data, diff = 0.01) {
 }
 
 
+select_power <- function(data, diff = 0.01) {
+  
+  tests_id <- data %>% 
+    filter(State_1 != State_2) %>% 
+    group_by(Test_id) %>% 
+    summarise(m_power = mean(Power)) %>% 
+    filter(m_power >= m_power[Test_id == "Deuteros lm_identity"] + diff) %>% 
+    select(Test_id)
+  
+  data %>% 
+    filter(Test_id %in% c(tests_id$Test_id, "Deuteros lm_identity", "MEMHDX lmm_identity"))
+}
+
+
 p <- sim_results %>% 
-  select_results(diff = 0.05) %>% 
+  select_results(diff = 0.01) %>% 
+  select_power(diff = 0.1) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +
@@ -90,9 +105,9 @@ names(pf2.labs) <- as.character(pfs)
 
 
 p <- sim_results %>% 
-  select_results(diff = 0) %>% 
+  select_results(diff = 0.01) %>% 
+  select_power(diff = 0.1) %>% 
   filter(State_1 %in% pfs, State_2 %in% pfs) %>%
-  filter(Test_id %in% c("2100_id_identity", "2400_id_identity", "3600_id_identity", "Deuteros lm_identity")) %>% 
   ggplot(aes(x = Test_id, y = Power, fill = Test_id)) +
   geom_col()+
   ylab("Rejection rate") +

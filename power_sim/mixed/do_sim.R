@@ -10,13 +10,13 @@ library(data.table)
 library()
 
 
-new_pf <- c(10, 15, 20, 30, 40, 50, 90, 100, 200, 210)
+new_pf <- c(10, 15, 20, 30, 40, 50, 90, 100, 200, 210, 300, 400, 600, 1000)
 times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
 
 set.seed(17)
 params <- readRDS("../all_params.RDS")
-sequences <- sample(unique(params$sequence), 50, replace = FALSE)
+sequences <- sample(unique(params$sequence), 250, replace = FALSE)
 
 all_params <- params %>% 
   dplyr::select(sequence, pH, step) %>% 
@@ -57,7 +57,7 @@ get_power = function(spectra_list) {
                                                     mass_deviations = 5,
                                                     per_run_deviations = 0.1)
         calculate_hdx_power(noisy_curves,
-                            tests = list(deuteros, Mixed_multi_knots_rep, Mixed_multi_knots_id),
+                            tests = list(deuteros, Mixed_multi_knots_id),
                             significance_level  = 0.05, 
                             summarized = FALSE)
       }, error = function(e) {

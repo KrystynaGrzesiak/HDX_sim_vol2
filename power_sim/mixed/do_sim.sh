@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --output=sim_lme.out
-#SBATCH --job-name=lme
+#SBATCH --job-name=lme_long
 #SBATCH --partition=accel
 #SBATCH --time=30-00:00:00
 module purge
