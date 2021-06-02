@@ -1,6 +1,5 @@
 
 library(glmnet)
-library(SLOPE)
 
 
 truncated_lines <- function(x, kappa){
