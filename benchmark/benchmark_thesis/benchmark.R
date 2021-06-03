@@ -30,13 +30,14 @@ new_pf <- c(100)
 set.seed(10)
 params <- readRDS("./all_params.RDS")
 
+
 sample_data <- params %>% 
   select(sequence) %>% 
   unique() %>% 
   mutate(lengths = nchar(sequence)) %>% 
-  mutate(intervals = cut(lengths, seq(0, 60, 15))) %>% 
+  mutate(intervals = cut(lengths, c(seq(0, 40, 10), 60))) %>% 
   group_by(intervals) %>% 
-  sample_n(3) %>% 
+  sample_n(10) %>% 
   ungroup() %>% 
   arrange(lengths)
 

@@ -19,28 +19,24 @@ sim_results = results %>%
 
 
 select_results <- function(data, diff = 0.01) {
-  
   tests_id <- data %>% 
     filter(State_1 == State_2) %>% 
     group_by(Test_id) %>% 
     summarise(m_error = mean(Power)) %>% 
     filter(m_error <= m_error[Test_id == "Deuteros lm_identity"] + diff) %>% 
     select(Test_id)
-  
   data %>% 
     filter(Test_id %in% tests_id$Test_id)
 }
 
 
 select_power <- function(data, diff = 0.01) {
-  
   tests_id <- data %>% 
     filter(State_1 != State_2) %>% 
     group_by(Test_id) %>% 
     summarise(m_power = mean(Power)) %>% 
     filter(m_power >= m_power[Test_id == "Deuteros lm_identity"] + diff) %>% 
     select(Test_id)
-  
   data %>% 
     filter(Test_id %in% c(tests_id$Test_id, "Deuteros lm_identity", "MEMHDX lmm_identity"))
 }
