@@ -86,6 +86,8 @@ ggplot2                 Create Elegant Data Visualisations Using the
                         Grammar of Graphics
 gh                      'GitHub' 'API'
 git2r                   Provides Access to Git Repositories
+glmnet                  Lasso and Elastic-Net Regularized Generalized
+                        Linear Models
 glue                    Interpreted String Literals
 graphics                The R Graphics Package
 grDevices               The R Graphics Devices and Support for Colours
@@ -177,6 +179,7 @@ rversions               Query 'R' Versions, Including 'r-release' and
                         'r-oldrel'
 scales                  Scale Functions for Visualization
 sessioninfo             R Session Information
+shape                   Functions for Plotting Graphical Shapes, Colors
 signal                  Signal Processing
 spatial                 Functions for Kriging and Point Pattern
                         Analysis
@@ -211,153 +214,4 @@ xopen                   Open System Files, 'URLs', Anything
 yaml                    Methods to Convert R Data to YAML and Back
 
 [1] "Spectra ok!"
-$AAHLP
-NULL
-
-$AAHLPAEFTPAVH
-NULL
-
-$AHHFGKEFTPPV
-NULL
-
-$AHVDDMPNALSALSDLH
-NULL
-
-$ALSALSDL
-NULL
-
-$ARLTWASHEKMHEGDEGPGHHHKPGLGEGTP
-NULL
-
-$ATLSEL
-NULL
-
-$CVLAHHFGKEFTPP
-NULL
-
-$DKLHVD
-NULL
-
-$DTNADKQLSF
-NULL
-
-$EFTPAVHASL
-NULL
-
-$FESFGD
-NULL
-
-$FESFGDLST
-NULL
-
-$FESFGDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNL
-NULL
-
-$FLSFPTTKTYFPHFDLSHGSA
-NULL
-
-$FLSFPTTKTYFPHFDLSHGSAQVKGHGKK
-NULL
-
-$FRLLG
-NULL
-
-$FSDGLAH
-NULL
-
-$FSDGLAHLDNLKGT
-NULL
-
-$GDLSTPDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTF
-NULL
-
-$GLAHLDNLKGTF
-NULL
-
-$GNPKVKAHGKKVLGA
-NULL
-
-$HAHKLRVD
-NULL
-
-$HASL
-NULL
-
-$HCDKLHVD
-NULL
-
-$HVDPENF
-NULL
-
-$KSAVTAL
-NULL
-
-$KTNVKAAWGKVGAHAGEYGAEAL
-NULL
-
-$LDNLKGTF
-NULL
-
-$LVVYPW
-NULL
-
-$LWGKVNVDEVGGEALGR
-NULL
-
-$MGNPKVKAHGKKVLGAFSDGLAHL
-NULL
-
-$NALAHKYH
-NULL
-
-$PAVH
-NULL
-
-$PDAVMGNPKVKAHGKKVLGAFSDGLAHLDNLKGTFATL
-NULL
-
-$PEEKSAV
-NULL
-
-$SALSDLHAHKLRVDPVNF
-NULL
-
-$SALSDLHAHKLRVDPVNFKLLSHCLL
-NULL
-
-$SELH
-NULL
-
-$STPDAVMGNPKVKAHGKKVLGA
-NULL
-
-$TCKMSQL
-NULL
-
-$TIINTFHQY
-NULL
-
-$TKTYFPHF
-NULL
-
-$TPAVHASL
-NULL
-
-$TPDAVMGNPKVKAHGKKVLGA
-NULL
-
-$VCVLAHHFGKE
-NULL
-
-$VGGEALGRL
-NULL
-
-$VLAHHFGKEFTPPV
-NULL
-
-$VLSPADKTNVKAAWGKVGAHAGE
-NULL
-
-$WGKVNVDEVGGEAL
-NULL
-
+slurmstepd: *** JOB 21033686 CANCELLED AT 2021-06-02T20:14:05 DUE TO NODE gpu6 FAILURE ***
