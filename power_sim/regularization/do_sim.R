@@ -54,11 +54,11 @@ get_power = function(spectra_list) {
         noisy_curves = get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,
                                                     reference = "all",
                                                     n_runs = 4,
-                                                    n_replicates = 1,
+                                                    n_replicates = 100,
                                                     mass_deviations = 5,
                                                     per_run_deviations = 0.1)
         calculate_hdx_power(noisy_curves,
-                            tests = list(deuteros, S_lasso_ridge, S_lasso_ridge_random),
+                            tests = list(deuteros, S_lasso_ridge, S_lasso_ridge_random, memhdx_model),
                             significance_level  = 0.05, 
                             summarized = FALSE)
       }, error = function(e) {
