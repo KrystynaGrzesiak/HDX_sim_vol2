@@ -9,7 +9,9 @@ library(mgcv)
 library(data.table)
 
 
-new_pf <- c(10, 15, 20, 30, 40, 50, 90, 100, 200, 210)
+new_pf <- c(10, 15, 20, 30, 40, 50, 90, 100, 110, 190, 200, 210, 300, 400)
+
+
 times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
 
@@ -56,7 +58,7 @@ get_power = function(spectra_list) {
                                                     mass_deviations = 5,
                                                     per_run_deviations = 0.1)
         calculate_hdx_power(noisy_curves,
-                            tests = list(deuteros, S_lasso_ridge),
+                            tests = list(deuteros, S_lasso_ridge, S_lasso_ridge_random),
                             significance_level  = 0.05, 
                             summarized = FALSE)
       }, error = function(e) {

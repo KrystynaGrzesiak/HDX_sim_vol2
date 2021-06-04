@@ -14,4 +14,4 @@ a <- get_noisy_deuteration_curves(spectra,
                                   reference = "all", 
                                   n_runs = 4,
                                   n_replicates = 1)
-data <- a[[6]][[1]]
+data <- a[[1]][[1]]
