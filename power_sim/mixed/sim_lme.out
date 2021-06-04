@@ -214,4 +214,3 @@ xopen                   Open System Files, 'URLs', Anything
 yaml                    Methods to Convert R Data to YAML and Back
 
 [1] "Spectra ok!"
-slurmstepd: *** JOB 21033686 CANCELLED AT 2021-06-02T20:14:05 DUE TO NODE gpu6 FAILURE ***
