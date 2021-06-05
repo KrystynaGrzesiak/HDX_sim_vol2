@@ -77,7 +77,7 @@ do_sim_parallel <- function(spectra_list, n_cpus) {
 
 cores = detectCores()
 
-get_power(do_sim_parallel, n_cpus = cores)
+do_sim_parallel(do_sim_parallel, n_cpus = cores)
 
 
 
