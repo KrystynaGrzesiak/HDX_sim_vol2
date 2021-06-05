@@ -31,7 +31,3 @@ The following objects are masked from ‘package:dplyr’:
 
     between, first, last
 
-[1] "Spectra ok!"
-Error in get_power(do_sim_parallel, n_cpus = cores) : 
-  could not find function "get_power"
-Execution halted
