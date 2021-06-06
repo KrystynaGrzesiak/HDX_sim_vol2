@@ -31,3 +31,31 @@ The following objects are masked from ‘package:dplyr’:
 
     between, first, last
 
+[1] "Spectra ok!"
+<simpleError: object of type 'symbol' is not subsettable>
+<simpleError: object of type 'symbol' is not subsettable>
+<simpleError in combn(states, 2): n < m>
+$spectra_list
+[1] "Error in unique(noisy_curves[[1]][[1]]$Sequence) : \n  object 'noisy_curves' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in unique(noisy_curves[[1]][[1]]$Sequence): object 'noisy_curves' not found>
+
+$n_cpus
+[1] "Error in unique(noisy_curves[[1]][[1]]$Sequence) : \n  object 'noisy_curves' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in unique(noisy_curves[[1]][[1]]$Sequence): object 'noisy_curves' not found>
+
+[[3]]
+[1] "Error in unique(noisy_curves[[1]][[1]]$Sequence) : \n  object 'noisy_curves' not found\n"
+attr(,"class")
+[1] "try-error"
+attr(,"condition")
+<simpleError in unique(noisy_curves[[1]][[1]]$Sequence): object 'noisy_curves' not found>
+
+Warning message:
+In mclapply(spectra_list, function(spectrum) { :
+  all scheduled cores encountered errors in user code
