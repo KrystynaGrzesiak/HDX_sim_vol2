@@ -14,7 +14,10 @@ a <- get_noisy_deuteration_curves(spectra,
                                   reference = "all", 
                                   n_runs = 4,
                                   n_replicates = 10)
-data <- a
+data <- a[[1]][[1]]
+
+
+
 
 a = calculate_hdx_power(data, tests = list(S_lasso_ridge, deuteros), summarized = FALSE)
 
