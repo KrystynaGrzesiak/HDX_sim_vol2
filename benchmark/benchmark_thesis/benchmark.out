@@ -10,3 +10,4 @@ The following objects are masked from ‘package:base’:
 
     intersect, setdiff, setequal, union
 
+slurmstepd: *** JOB 21033694 CANCELLED AT 2021-06-08T18:14:29 *** on phi3
