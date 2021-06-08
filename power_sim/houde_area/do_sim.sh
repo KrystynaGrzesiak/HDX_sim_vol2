@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --output=sim_lme.out
-#SBATCH --job-name=lme
+#SBATCH --output=houde_sroude.out
+#SBATCH --job-houde_sroude=lme
 #SBATCH --partition=accel
 #SBATCH --time=30-00:00:00
 module purge
