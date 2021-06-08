@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --output=houde_sroude.out
-#SBATCH --job-houde_sroude=lme
+#SBATCH --job-name=houde_sroude
 #SBATCH --partition=accel
 #SBATCH --time=30-00:00:00
 module purge
