@@ -5,7 +5,7 @@ library(stringr)
 library(tidyr)
 
 
-files <- list.files(path = "./res_thesis", pattern = "\\.RDS$", full.names = TRUE) 
+files <- list.files(path = "./results", pattern = "\\.RDS$", full.names = TRUE) 
 sim_results <- do.call("rbind", lapply(files, readRDS))
 # 
 # files <- list.files(path = "./res_more", pattern = "\\.RDS$", full.names = TRUE) 
@@ -73,12 +73,37 @@ sim_results %>%
          rcpp_times = rcpp_times/1000000000) %>% 
   rename(markov = markov_times,
          rcpp = rcpp_times) %>% 
-  
   filter(markov < 0.2) %>% 
   gather(algorithm, time, markov, rcpp) %>% 
   group_by(algorithm, intervals) %>% 
   summarise(m_time = mean(time)) %>% 
   filter(intervals != "(45,60]" | algorithm != "rcpp") %>% 
   xtable()
+
+library(reshape2)
+
+data_wide <- dcast(olddata_long, subject + sex ~ condition, value.var="measurement")
+data_wide
+
+
+sim_results %>%
+  mutate(markov_times = markov_times/1000000000,
+         rcpp_times = rcpp_times/1000000000) %>% 
+  rename(markov = markov_times,
+         rcpp = rcpp_times) %>% 
+  filter(markov < 0.2) %>% 
+  gather(algorithm, time, markov, rcpp) %>% 
+  group_by(algorithm, intervals) %>% 
+  summarise(sd = sd(time)/60) %>% 
+  dcast(intervals ~ algorithm) %>% 
+  xtable(digits = 5)
+
+
+
+
+
+
+
+
 
 
