@@ -4,8 +4,7 @@ houde <- function(data, significance_level = 0.05) {
   States = unique(data$State)
   confidence_limit = 1 - significance_level
   
-  alpha <- 1 - confidence_limit
-  t_value <- qt(c(alpha/2, 1 - alpha/2), df = 2)[2]
+  t_value <- qt(c(significance_level/2, 1 - significance_level/2), df = 2)[2]
   
   calc_dat <- data %>%
     group_by(Sequence, State, Exposure, Rep, Experimental_state) %>%
