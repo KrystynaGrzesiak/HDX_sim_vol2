@@ -1,8 +1,11 @@
 
 library(glmnet)
+library(data.table)
 
-truncated_lines <- function(x, kappa){
-  (x - kappa)*(x > kappa)
+truncated_lines <- function(x, knots){
+  sapply(knots, function(kappa) {
+    (x - kappa)*(x > kappa)
+  })
 }
 
 test_semiparametric <- function(data, significance_level = 0.05) {
@@ -17,7 +20,7 @@ test_semiparametric <- function(data, significance_level = 0.05) {
     
     knots <- unique(setdiff(data[["Exposure"]], c(max(data[["Exposure"]]), min(data[["Exposure"]]))))
     X <- truncated_lines(data[["Exposure"]], knots)
-    
+
     colnames(X) <- c(paste0("knot_", as.character(knots)))
     
     cv_fit <- glmnet(X, data[["Mass"]], alpha = 0, lambda = 0.001)
