@@ -36,10 +36,10 @@ test_semiparametric <- function(data, significance_level = 0.05) {
   }
   
   suppressMessages({
-    model <- lmer(Mass ~ Exposure*State + (1|id) + (1|Exposure) + X_reduced,
+    model <- lmer(Mass ~ Exposure*State  + (1|Exposure) + X_reduced,
                   data = data,
                   REML = FALSE)
-    model_reduced <- lmer(Mass ~ Exposure + (1|id) + (1|Exposure) + X_reduced,
+    model_reduced <- lmer(Mass ~ Exposure  + (1|Exposure) + X_reduced,
                           data = data,
                           REML = FALSE)
   })
