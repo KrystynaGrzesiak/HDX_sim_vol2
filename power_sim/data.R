@@ -1,4 +1,4 @@
-library(powerHDX)
+library(powerHaDeX)
 
 times = c(5, 10, 20, 30, 40, 50, 60, 100, 300, 500, 900, 1200, 1500, 1800,
           2100, 2400, 3600, 7200, 21600, 43200)
@@ -12,9 +12,9 @@ spectra <- rbind(spec1, spec2, spec3)
 a <- get_noisy_deuteration_curves(spectra, 
                                   compare_pairs = TRUE, 
                                   reference = "all", 
-                                  n_runs = 4,
-                                  n_replicates = 10)
-data <- a[[1]][[1]]
+                                  n_replicates = 4,
+                                  n_experiments  = 10)
+data <- a[[6]][[10]]
 
 
 
