@@ -58,7 +58,7 @@ get_power = function(spectra_list) {
                                                     per_run_deviations = runif(21, 0, 0.5), 
                                                     mass_deviations = rnorm(21, 50, 10))
         calculate_hdx_power(noisy_curves,
-                            tests = list(test_semiparametric),
+                            tests = list(test_semiparametric, houde),
                             significance_level  = 0.05, 
                             summarized = FALSE)
       }, error = function(e) {
