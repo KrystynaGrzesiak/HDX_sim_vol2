@@ -1,0 +1,55 @@
+ModuleCmd_Load.c(213):ERROR:105: Unable to locate a modulefile for 'system/R−3.6.1'
+Loading required package: lme4
+Loading required package: Matrix
+
+Attaching package: ‘lmerTest’
+
+The following object is masked from ‘package:lme4’:
+
+    lmer
+
+The following object is masked from ‘package:stats’:
+
+    step
+
+Loaded glmnet 4.1-1
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Loading required package: foreach
+Loading required package: iterators
+Loading required package: parallel
+Loading required package: nlme
+
+Attaching package: ‘nlme’
+
+The following object is masked from ‘package:dplyr’:
+
+    collapse
+
+The following object is masked from ‘package:lme4’:
+
+    lmList
+
+This is mgcv 1.8-35. For overview type 'help("mgcv-package")'.
+
+Attaching package: ‘data.table’
+
+The following objects are masked from ‘package:dplyr’:
+
+    between, first, last
+
+[1] "Spectra ok!"
+<simpleError in get_noisy_deuteration_curves(spectrum, compare_pairs = TRUE,     reference = "all", n_runs = 4, n_replicates = 100, mass_deviations = 5,     per_run_deviations = 0.1, per_run_deviations = runif(21),     mass_deviations = rnorm(21, 50, 10)): formal argument "mass_deviations" matched by multiple actual arguments>
+Error in unique(noisy_curves[[1]][[1]]$Sequence) : 
+  object 'noisy_curves' not found
+Calls: get_power -> lapply -> FUN -> unique
+Execution halted

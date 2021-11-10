@@ -1,5 +1,5 @@
 
-source("./model.R")
+source("./models.R")
 
 
 library(powerHDX)
