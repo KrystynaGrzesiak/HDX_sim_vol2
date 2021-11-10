@@ -1,5 +1,5 @@
 
-source("./model.R")
+source("./models.R")
 
 
 library(powerHDX)
@@ -55,9 +55,7 @@ get_power = function(spectra_list) {
                                                     reference = "all",
                                                     n_runs = 4,
                                                     n_replicates = 100,
-                                                    mass_deviations = 5,
-                                                    per_run_deviations = 0.1,
-                                                    per_run_deviations = runif(21), 
+                                                    per_run_deviations = runif(21, 0, 0.5), 
                                                     mass_deviations = rnorm(21, 50, 10))
         calculate_hdx_power(noisy_curves,
                             tests = list(test_semiparametric),
