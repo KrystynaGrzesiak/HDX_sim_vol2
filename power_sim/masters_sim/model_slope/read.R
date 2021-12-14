@@ -49,7 +49,6 @@ read_summarize_files <- function(path) {
 
 
 sim_res <- read_summarize_files("./results")
-sim_res_houde <- read_summarize_files("../houde_area/results")
 
 tests <- c("Houde_NA",
            "Semiparametric model_identity"
@@ -57,9 +56,7 @@ tests <- c("Houde_NA",
 
 ############ KOLORKI
 
-plot_rej_rate <- sim_res_houde %>% 
-  filter(Sequence %in% intersect(Sequence, sim_res$Sequence)) %>% 
-  rbind(sim_res) %>% 
+plot_rej_rate <- sim_res %>% 
   group_by(Test_id, State_1, State_2) %>% 
   summarise(Power = round(mean(Significant_difference, na.rm = TRUE), 2)) %>%
   ungroup() %>% 
